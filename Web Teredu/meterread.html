@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teredu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/teredu_logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="meterread.html">Meter Reading</a></li>
+                <!-- <li><a href="tentang.html">Tentang</a></li> -->
+                <li><a href="daftar.html">Daftar PAM</a></li>
+                <li><a href="kontak.html">Kontak PAM</a></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="pagemeter" id="pagetwo">
+        <form>
+        <h2>Cek Besar Penggunaan PAM Setiap Saat</h2>
+        <h2>Secara Mandiri Dengan Meter Air</h2>
+        <div>
+            <h3>Dengan mudah agar dapat menghemat pengeluaran biaya</h3>
+            <h3>dan mencegah terjadinya kebocoran pipa saluran</h3>
+        </div>
+        <input type="text" id="serialnumber" placeholder="Nomor Seri Meteran" required>
+        <label>Foto Meteran
+            <input type="file" name="scanimage" accept="image/png, image/jpeg" />
+          </label>
+        <input type="number" id="value" placeholder="Nilai Indeks Meter" required>
+        <h8>Lokasi*</h8>
+            <div class="con">
+                    <input type="radio" name="location" id="city1" required>
+                    <label>Jakarta Pusat</label>
+                    <input type="radio" name="location" id="city2" required>
+                    <label>Jakarta Barat</label>
+                    <input type="radio" name="location" id="city3" required>
+                    <label>Jakarta Selatan</label>
+                    <input type="radio" name="location" id="city4" required>
+                    <label>Jakarta Utara</label>
+                    <input type="radio" name="location" id="city5" required>
+                    <label>Jakarta Timur</label>
+            </div>
+        <h7>*Wajib Pilih Salah Satu</h7>
+        <!-- <div class="selectbox" style="width:200px;">
+            <select name="area" id="area" required="required">
+            <option value>Pilih Lokasi</option>
+            <option value="1">Jakarta Barat</option>
+            <option value="2">Jakarta Selatan</option>
+            <option value="3">Jakarta Pusat</option>
+            <option value="4">Jakarta Utara</option>
+            <option value="5">Jakarta Timur</option>
+        </select>
+        </div> -->
+    
+        <!-- type="text" id="location" placeholder="Location" -->
+
+        <p id="result">
+            <button id="btn">Hitung</button>
+             <div class="resultpage">
+                <h6>Besar Konsumsi Air : </h6>
+                <h6>Pembacaan saat ini : </h6>
+                <h6>Tanggal dan waktu saat ini : </h6>
+                <h6>Pembacaan Terakhir : </h6>
+                <h6>Tanggal dan waktu terakhir : </h6>
+                <h9>*Cek perkiraan jumlah tagihan pembayaran melalui</h9>
+                <h9><a id="linkini" href="https://www.pamjaya.co.id/infopelanggan/simulasi">Link ini</a></h9>
+             </div>
+        </p>
+        </form>
+
+    </section>
+<!-- <script>
+    function Hitung(){
+
+    }
+</script> -->
+
+    <footer class="section-p1">
+        <div class="col">
+            <img src="img/footer.png" alt="">
+            <h5>Website edukasi seputar air bersih PAM JAYA</h5>
+            <h5>untuk masyarakat agar memperluas</h5>
+            <h5>sambungan air bersih</h5>
+        </div>
+
+        <div class="col1">
+            <h3>Layanan</h3>
+            <a href="daftar.html">Daftar PAM</a>
+            <a href="meterread.html">Baca Meter</a>
+            <a href="kontak.html">Hubungi PAM Jaya</a>
+        </div>
+
+        <div class="col2">
+            <h3>Support</h3>
+            <a href="#">Tentang</a>
+            <a href="#">Hubungi</a>
+            <a href="#">Privasi dan Kebijakan</a>
+        </div>
+
+        <!-- <div class="copyright">
+            <h4>Copyright 2022 Teredu Company Alright Reserved</h4>
+        </div> -->
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+

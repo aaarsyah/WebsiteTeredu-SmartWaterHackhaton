@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Connection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit = "sendEmail(); reset(); return false;">
+            <h3>NEW CONNECTION</h3>
+            <input type="text" id="firstname" placeholder="First Name" required>
+            <input type="text" id="lastname" placeholder="Last Name" required>
+            <input type="text" id="street" placeholder="Street" required>
+            <input type="text" id="city" placeholder="City" required>
+            <input type="number" id="phonenumber" placeholder="Phone Number" required>
+            <input type="email" id="email" placeholder="johndue@gmail.com" required>
+            <input type="number" id="idnumber" placeholder="ID Number" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "testingsiapa@gmail.com", //username elasticemail
+            Password : "7974049FD5686570BC29F34533CA18945E94", //password smtp elasticemail selalu berubah
+            To : 'addindaayuarsyah@gmail.com',  //dikirim ke email siapa
+            From : document.getElementById("email").value, //email user
+            Subject : "New Connection PAM JAYA", //subjek email
+            Body : "First Name: " + document.getElementById("firstname").value
+                + "<br> Last Name: " + document.getElementById("lastname").value
+                + "<br> Street: " + document.getElementById("street").value
+                + "<br> City: " + document.getElementById("city").value
+                + "<br> Phone Number: " + document.getElementById("phonenumber").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> ID Number: " + document.getElementById("idnumber").value
+        }).then(
+        message => alert(massage)
+        );
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teredu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/teredu_logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="meterread.html">Meter Reading</a></li>
+                <!-- <li><a href="tentang.html">Tentang</a></li> -->
+                <li><a class="active" href="daftar.html">Daftar PAM</a></li>
+                <li><a href="kontak.html">Kontak PAM</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="daftar">
+        <div class="container">
+            <form onsubmit = "sendEmail(); reset(); return false;">
+                <h3>DAFTAR PAM JAYA</h3>
+                <input type="text" id="firstname" placeholder="First Name" required>
+                <input type="text" id="lastname" placeholder="Last Name" required>
+                <input type="text" id="street" placeholder="Street" required>
+                <h8>City*</h8>
+                <div class="con">
+                    <input type="radio" name="city" id="city1" required>
+                    <label>Jakarta Pusat</label>
+                    <input type="radio" name="city" id="city2" required>
+                    <label>Jakarta Barat</label>
+                    <input type="radio" name="city" id="city3" required>
+                    <label>Jakarta Selatan</label>
+                    <input type="radio" name="city" id="city4" required>
+                    <label>Jakarta Utara</label>
+                    <input type="radio" name="city" id="city5" required>
+                    <label>Jakarta Timur</label>
+                </div>
+                <input type="number" id="phonenumber" placeholder="Phone Number" required>
+                <input type="email" id="email" placeholder="johndue@gmail.com" required>
+                <input type="number" id="idnumber" placeholder="ID Number" required>
+                <button type="submit"> <a href="sumbitdaftar.html">Submit</a></button>
+            </form>
+        </div>
+
+        
+    </section>
+
+    
+    <footer class="section-p1">
+        <div class="col">
+            <img src="img/footer.png" alt="">
+            <h5>Website edukasi seputar air bersih PAM JAYA</h5>
+            <h5>untuk masyarakat agar memperluas</h5>
+            <h5>sambungan air bersih</h5>
+        </div>
+
+        <div class="col">
+            <h3>Layanan</h3>
+            <a href="daftar.html">Daftar PAM</a>
+            <a href="meterread.html">Baca Meter</a>
+            <a href="kontak.html">Hubungi PAM Jaya</a>
+        </div>
+
+        <div class="col">
+            <h3>Support</h3>
+            <a href="#">Tentang</a>
+            <a href="#">Hubungi</a>
+            <a href="#">Privasi dan Kebijakan</a>
+        </div>
+
+        <!-- <div class="copyright">
+            <h4>Copyright 2022 Teredu Company Alright Reserved</h4>
+        </div> -->
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+

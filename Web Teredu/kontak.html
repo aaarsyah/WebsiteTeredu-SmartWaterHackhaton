@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teredu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/teredu_logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="meterread.html">Meter Reading</a></li>
+                <!-- <li><a href="tentang.html">Tentang</a></li> -->
+                <li><a href="daftar.html">Daftar PAM</a></li>
+                <li><a class="active" href="kontak.html">Kontak PAM</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="daftar">
+        <div class="container">
+            <form onsubmit = "sendEmail(); reset(); return false;">
+                <h3>KONTAK PAM JAYA</h3>
+                <input type="number" id="accountnumber" placeholder="Account Number" required>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="johndue@gmail.com" required>
+                <h8>Category Complaint*</h8>
+                <div class="con">
+                    <input type="radio" name="category" id="category1" required>
+                    <label>Air Mati</label>
+                    <input type="radio" name="category" id="category2" required>
+                    <label>Air Kotor</label>
+                    <input type="radio" name="category" id="category3" required>
+                    <label>Tagihan</label>
+                    <input type="radio" name="category" id="category4" required>
+                    <label>Lainnya</label>
+                </div>
+                <input type="text" id="location" placeholder="Location" required>
+                <input type="text" id="group" placeholder="Group Tarif" required>
+                <button type="kirim">Kirim</button>
+            </form>
+        </div>
+
+        <script>
+            function sendEmail(){
+                Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "testingsiapa@gmail.com", //username elasticemail
+                Password : "7974049FD5686570BC29F34533CA18945E94", //password smtp elasticemail selalu berubah
+                To : 'addindaayuarsyah@gmail.com',  //dikirim ke email siapa
+                From : document.getElementById("email").value, //email user
+                Subject : "New Connection PAM JAYA", //subjek email
+                Body : "Account Number: " + document.getElementById("accountnumber").value
+                    + "<br> Name : " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Category Complaint: " + document.getElementsByName("category").value
+                    + "<br> Location : " + document.getElementById("location").value
+                    + "<br> Group Tarif : " + document.getElementById("group").value
+            }).then(
+            message => alert(message)
+            );
+            }
+        </script>
+    </section>
+
+    
+    <footer class="section-p1">
+        <div class="col">
+            <img src="img/footer.png" alt="">
+            <h5>Website edukasi seputar air bersih PAM JAYA</h5>
+            <h5>untuk masyarakat agar memperluas</h5>
+            <h5>sambungan air bersih</h5>
+        </div>
+
+        <div class="col">
+            <h3>Layanan</h3>
+            <a href="daftar.html">Daftar PAM</a>
+            <a href="meterread.html">Baca Meter</a>
+            <a href="kontak.html">Hubungi PAM Jaya</a>
+        </div>
+
+        <div class="col">
+            <h3>Support</h3>
+            <a href="#">Tentang</a>
+            <a href="#">Hubungi</a>
+            <a href="#">Privasi dan Kebijakan</a>
+        </div>
+
+        <!-- <div class="copyright">
+            <h4>Copyright 2022 Teredu Company Alright Reserved</h4>
+        </div> -->
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+
